@@ -44,7 +44,14 @@ while True:
     print("\n-------------\nWhat do you want to search for in the Kahless lexicon?")
     s = input()
     print("\n")
-    swisdom("kahless.txt",s)
-    time.sleep(6)
-    cat(random.choice(pics))
-    print(getWD("worf"))
+    if s == "dorandom":
+        while True:
+            cat(random.choice(pics))
+            print("\n"+getWD("kahless.txt"))
+            print("\n\n"+getWD("worf"))
+            time.sleep(10)
+    else:    
+        swisdom("kahless.txt",s)
+        time.sleep(6)
+        cat(random.choice(pics))
+        print(getWD("worf"))
