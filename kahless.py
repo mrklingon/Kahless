@@ -41,17 +41,22 @@ def swisdom(filename,srch):
 cat("emblem")
 
 while True:
-    print("\n-------------\nWhat do you want to search for in the Kahless lexicon?")
+    print("\n-------------\nWhat do you want to search for in the Kahless/The Final Reflecton lexicons?")
     s = input()
     print("\n")
     if s == "dorandom":
         while True:
             cat(random.choice(pics))
-            print("\n"+getWD("kahless.txt"))
+            if random.randrange(10) > 4: 
+                print("\n"+getWD("kahless.txt"))
+            else:
+                print("\n"+getWD("klingonaase.txt"))
             print("\n\n"+getWD("worf"))
             time.sleep(10)
     else:    
         swisdom("kahless.txt",s)
+        swisdom("klingonaase.txt",s)
+        
         time.sleep(6)
         cat(random.choice(pics))
         print(getWD("worf"))
