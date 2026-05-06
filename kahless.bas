@@ -3,7 +3,6 @@
 30 for i = 1 to 147
 100 READ T$ 
 150 DICT$(i)=T$
-200 PRINT i
 205 print T$
 300 next i
 1000 for i = 1 to 30
